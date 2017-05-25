@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Azure ML Demo</title>
+		<script src="https://unpkg.com/vue"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+
+	<body>
+		<div class="container-fluid" id="app">
+			<h1>Automobile Price Prediction Demo</h1>
+			<form>	
+				<div class="form-group">
+					<label>Make</label>
+					<select v-model="input.make" class="form-control">
+						<option value="alfa-romero">Alfa Romero</option>
+						<option value="audi">Audi</option>
+						<option value="bmw">BMW</option>
+						<option value="chevrolet">Chevrolet</option>
+						<option value="dodge">Dodge</option>
+						<option value="honda">Honda</option>
+						<option value="isuzu">Isuzu</option>
+						<option value="jaguar">Jaguar</option>
+						<option value="mazda">Mazda</option>
+						<option value="mercedes-benz">Mercedes-Benz</option>
+						<option value="mitsubishi">Mitsubishi</option>
+						<option value="nissan">Nissan</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Body Style</label>
+					<select v-model="input.body_style" class="form-control">
+						<option value="convertible">Convertible</option>
+						<option value="hatchback">Hatchback</option>
+						<option value="hardtop">Hardtop</option>
+						<option value="sedan">Sedan</option>
+						<option value="wagon">Wagon</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Wheel Base</label>
+					<input v-model="input.wheel_base" class="form-control" type="number">
+				</div>
+				<div class="form-group">
+					<label>Engine Size</label>
+					<input v-model="input.engine_size" class="form-control" type="number">
+				</div>
+				<div class="form-group">
+					<label>Horsepower</label>
+					<input v-model="input.horsepower" class="form-control" type="number">
+				</div>
+				<div class="form-group">
+					<label>Peak RPM</label>
+					<input v-model="input.peak_rpm" class="form-control" type="number">
+				</div>
+				<div class="form-group">
+					<label>Highway MPG</label>
+					<input v-model="input.highway_mpg" class="form-control" type="number">
+				</div>
+				<button v-on:click="submitForm" type="button" class="btn btn-default">Get Prediction</button>
+			</form>
+		</div>
+		<script src="index.js"></script>
+	</body>
+
+</html>
